@@ -25,4 +25,4 @@ Robert Nyman talk went over some of the APIs, permissions and application catego
 Angelina took a more practical approach, and live coded an application, showing how easy it is to create a new app for Firefox. The session went as well as live coding tipically goes, but it got the point across. If you know your javascript, you are pretty much set for developing for Firefox OS. I didn't find the slides, but you can see the code [on github](https://github.com/afabbro/fxos-websockets-notifications-app).
 
 
-This seals the deals on the first day. Also, [watch this](http://www.youtube.com/watch?v=QDv6yM6pN6U).
+This seals the deal on the first day. Also, [watch this](http://www.youtube.com/watch?v=QDv6yM6pN6U).
