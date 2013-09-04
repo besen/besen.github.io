@@ -28,8 +28,9 @@ article header {
 	margin-bottom: 10px;
 }
 
-time {
+time, a.author {
 	font-style: italic;
+	text-decoration: none;
 }
 
 article a:visited {
