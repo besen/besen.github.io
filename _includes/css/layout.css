@@ -40,6 +40,14 @@ article a:visited {
 article a {
 	color: #400000;
 }
+
+div.highlight {
+    background-color: #eee;
+    border-left: solid thin #900;
+    box-shadow: 0 0 1em #aaa;
+    padding: 5px;
+    margin: 0 0 20px 0;
+}
 /* #Page Styles
 ================================================== */
 
