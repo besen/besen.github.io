@@ -8,7 +8,7 @@ categories: javascript
 [Promises](http://wiki.commonjs.org/wiki/Promises/A) are all the rage this year, so I tought I'd join the club and do a post about it.
 
 Last week I teamed up with some friends for the [Node Knockout 2013](http://2013.nodeknockout.com/)
-(with a[great submission](http://cinemafu.com/), by the way) and used a LOT of promises on the server side.
+(with a [great submission](http://cinemafu.com/), by the way) and used a LOT of promises on the server side.
 
 Since promises are not a part of the core implementation of Node.js, callbacks are common pattern for the
 standard lib and for other libs that don't have dependencies. In our case, promises prevented
