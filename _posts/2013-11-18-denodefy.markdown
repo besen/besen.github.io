@@ -1,0 +1,76 @@
+---
+layout: post
+title:  "Denodeify"
+date:   2013-11-18 21:00:00
+categories: javascript
+---
+
+[Promises](http://wiki.commonjs.org/wiki/Promises/A) are all the rage this year, so I tought I'd join the club and do a post about it.
+
+Last week I teamed up with some friends for the [Node Knockout 2013](http://2013.nodeknockout.com/)
+(with a[great submission](http://cinemafu.com/), by the way) and used a LOT of promises on the server side.
+
+Since promises are not a part of the core implementation of Node.js, callbacks are common pattern for the
+standard lib and for other libs that don't have dependencies. In our case, promises prevented
+a lot of nesting, which would be much more difficult to avoid using pure callbacks.
+
+We used [RSVP.js](https://github.com/tildeio/rsvp.js) as our promise implementation, and made a bunch of calls to
+[the movie db API](http://www.themoviedb.org/documentation/api). Wrapping [all those callbacks](https://github.com/raqqa/node-tmdb) in promises became a chore, so I thought there should be a better way to do this. That's when I decided to take a look at the source code of RSVP, and noticed the function "denodeify".
+
+Using [request](https://github.com/mikeal/request) as an example, this handy function helps you transform this:
+
+{% highlight js %}
+var RSVP = require('rsvp'),
+    request = require('request')
+    baseUrl = 'http://www.iheartquotes.com/api/v1/random?source=';
+
+function randomQuote(source) {
+  return new RSVP.Promise(function(resolve, reject) {
+    request(baseUrl + source, function(err,res, body) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(body);
+      }
+    });
+  });
+}
+
+randomQuote("isaac_asimov").then(console.log);
+
+// output
+
+// The most exciting phrase to hear in science, the one that heralds new
+// discoveries, is not "Eureka!" (I found it!) but "That's funny ..."
+// 
+//   -- Isaac Asimov
+// 
+// [codehappy] http://iheartquotes.com/fortune/show/17562
+{% endhighlight %}
+
+into this:
+
+{% highlight js %}
+var RSVP = require('rsvp'),
+    request = require('request')
+    baseUrl = 'http://www.iheartquotes.com/api/v1/random?source=',
+    promiseRequest = RSVP.denodeify(request);
+
+function randomQuote(source) {
+  return promiseRequest(baseUrl + source).then(function (res) {
+    return res[1]; // arguments passed as an array
+  });
+}
+
+randomQuote("william_gibson").then(console.log);
+
+// output
+
+// "The Street finds its own uses for technology."
+// -- William Gibson
+// 
+// [codehappy] http://iheartquotes.com/fortune/show/25135
+{% endhighlight %}
+
+Much better! There is no documentation of this in the RSVP main page, but [Q](https://github.com/kriskowal/q)
+also has this and other utilities for adapting functions that take callbacks. 
