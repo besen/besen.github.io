@@ -5,12 +5,11 @@ date:   2013-09-02 23:20:00
 categories: javascript
 ---
 
-_Last post: [part 3]({% post_url 2013-08-29-braziljs-part-3 %}).
-_
+_Last post: [part 3]({% post_url 2013-08-29-braziljs-part-3 %})._
 
 <a href="http://www.flickr.com/photos/96377435@N08/9656377319/" title="Belíssima skyline portoalegrense por renatobesen, no Flickr"><img src="http://farm3.staticflickr.com/2819/9656377319_a726c7051a.jpg" width="500" height="331" alt="Belíssima skyline portoalegrense"></a>
 
-After all the awesome talks of the first day, I went to the hotel and learned that my reservations where for July, one month earlier than the event. _Sigh_. Fortunately there was a room available on another hotel, and the cab fare was cheap (at least comparing to Florianópolis). 
+After all the awesome talks of the first day, I went to the hotel and learned that my reservations where for July, one month earlier than the event. _Sigh_. Fortunately there was a room available on another hotel, and the cab fare was cheap (at least comparing to Florianópolis).
 
 ###Buscando a melhor performance em Aplicativos Móveis com HTML5 ([Demian Borba](https://twitter.com/demianborba))
 <a href="http://www.flickr.com/photos/96377435@N08/9601126357/" title="Demian Borba por renatobesen, no Flickr"><img src="http://farm8.staticflickr.com/7431/9601126357_01e0c859be.jpg" width="500" height="331" alt="Demian Borba"></a>

@@ -5,8 +5,7 @@ date:   2013-08-29 23:20:00
 categories: javascript
 ---
 
-_Other posts: [part 1]({% post_url 2013-08-26-braziljs-part-1 %}) and
-[part 2]({% post_url 2013-08-27-braziljs-part-2 %})._
+_Last post: [part 2]({% post_url 2013-08-27-braziljs-part-2 %})._
 
 <a href="http://www.flickr.com/photos/96377435@N08/9622761405/" title="Mozilla por renatobesen, no Flickr"><img src="http://farm6.staticflickr.com/5535/9622761405_a990fbdcaa.jpg" width="500" height="331" alt="Mozilla"></a>
 
@@ -18,7 +17,7 @@ The first day ended with two talks about the Firefox OS. One thing that both tal
 Robert Nyman talk went over some of the APIs, permissions and application categories, and a little about the Firefox OS marketplace. A lot of the APIs that are present on the OS are also present on other Firefoxes. On Android, applications can be installed and accessed by an icon on the home screen, just like you would expect. Some  [resources](https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/) [for](https://github.com/robnyman/Firefox-OS-Boilerplate-App) [developers](https://marketplace.firefox.com/developers/) were mentioned. And you should [read this](http://robertnyman.com/2013/08/23/braziljs-conference-and-a-very-interesting-night-in-brazil/).
 
 [Slides](http://www.slideshare.net/robnyman/bringing-the-open-web-ap-is-to-mobile-devices-with-firefox-os-brazil-js)
- 
+
 ###How to make mobile apps: Web developer REMIX ([Angelina Fabbro](https://twitter.com/angelinamagnum))
 <a href="http://www.flickr.com/photos/96377435@N08/9604380548/" title="Angelina Fabbro por renatobesen, no Flickr"><img src="http://farm3.staticflickr.com/2887/9604380548_d306e260cb.jpg" width="500" height="331" alt="Angelina Fabbro"></a>
 

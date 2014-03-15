@@ -5,8 +5,7 @@ date:   2013-09-04 23:13:00
 categories: javascript
 ---
 
-_Last post: [part 5]({% post_url 2013-09-03-braziljs-part-5 %}).
-_
+_Last post: [part 5]({% post_url 2013-09-03-braziljs-part-5 %})._
 
 <a href="http://www.flickr.com/photos/96377435@N08/9604366014/" title="end por renatobesen, no Flickr"><img src="http://farm3.staticflickr.com/2810/9604366014_7ea5288a27.jpg" width="500" height="331" alt="end"></a>
 
