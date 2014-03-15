@@ -19,58 +19,11 @@ We used [RSVP.js](https://github.com/tildeio/rsvp.js) as our promise implementat
 
 Using [request](https://github.com/mikeal/request) as an example, this handy function helps you transform this:
 
-{% highlight js %}
-var RSVP = require('rsvp'),
-    request = require('request')
-    baseUrl = 'http://www.iheartquotes.com/api/v1/random?source=';
-
-function randomQuote(source) {
-  return new RSVP.Promise(function(resolve, reject) {
-    request(baseUrl + source, function(err,res, body) {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(body);
-      }
-    });
-  });
-}
-
-randomQuote("isaac_asimov").then(console.log);
-
-// output
-
-// The most exciting phrase to hear in science, the one that heralds new
-// discoveries, is not "Eureka!" (I found it!) but "That's funny ..."
-// 
-//   -- Isaac Asimov
-// 
-// [codehappy] http://iheartquotes.com/fortune/show/17562
-{% endhighlight %}
+{% gist besen/c0ef10765a93345cb88e old-way.js %}
 
 into this:
 
-{% highlight js %}
-var RSVP = require('rsvp'),
-    request = require('request')
-    baseUrl = 'http://www.iheartquotes.com/api/v1/random?source=',
-    promiseRequest = RSVP.denodeify(request);
-
-function randomQuote(source) {
-  return promiseRequest(baseUrl + source).then(function (res) {
-    return res[1]; // arguments passed as an array
-  });
-}
-
-randomQuote("william_gibson").then(console.log);
-
-// output
-
-// "The Street finds its own uses for technology."
-// -- William Gibson
-// 
-// [codehappy] http://iheartquotes.com/fortune/show/25135
-{% endhighlight %}
+{% gist besen/c0ef10765a93345cb88e denodeify.js %}
 
 Much better! There is no documentation of this in the RSVP main page, but [Q](https://github.com/kriskowal/q)
-also has this and other utilities for adapting functions that take callbacks. 
+also has this and other utilities for adapting functions that take callbacks.
