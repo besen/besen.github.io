@@ -28,6 +28,11 @@ article header {
 	margin-bottom: 10px;
 }
 
+article footer{
+	opacity: .1;
+	margin-bottom: 100px;
+}
+
 time, a.author {
 	font-style: italic;
 	text-decoration: none;
