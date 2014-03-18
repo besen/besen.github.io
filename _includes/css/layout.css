@@ -20,12 +20,42 @@ body {
 	background-image: url(/img/subtle_dots.png);
 }
 
+header.banner h1 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 78px;
+	font-weight: 400;
+	text-align: center;
+}
+
+header.banner a {
+	text-decoration: none;
+}
+
+nav ul {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	margin: 50px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+nav ul li {
+	display: inline;
+	padding: 0 10px;
+}
+
+nav ul li a {
+	display: inline-block;
+	text-decoration: none;
+}
+
 .container {
-	padding-top: 60px;
+	padding-top: 40px;
 }
 
 article header {
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 
 article footer{
@@ -66,7 +96,14 @@ div.highlight {
 	@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+		header.banner h1 {
+			font-family: 'Raleway', sans-serif;
+			font-size: 42px;
+			font-weight: 400;
+			text-align: center;
+		}
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
