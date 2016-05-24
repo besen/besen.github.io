@@ -17,7 +17,7 @@
 /* #Site Styles
 ================================================== */
 body {
-	background-image: url(/img/subtle_dots.png);
+	background-color: #F4EFE3;
 }
 
 header.banner h1 {
@@ -29,6 +29,7 @@ header.banner h1 {
 
 header.banner a {
 	text-decoration: none;
+	color: #6C675B;
 }
 
 nav ul {
@@ -37,7 +38,6 @@ nav ul {
 	font-weight: 400;
 	margin: 50px 0;
 	text-align: center;
-	text-transform: uppercase;
 }
 
 nav ul li {

@@ -1,4 +1,6 @@
-name: besen - a blog
-description: Renato Besen's personal blog
+name: Renato Besen
+description: Renato Besen's personal website
 url: http://besen.me
-pygments: true
+highlighter: rouge
+gems:
+  - jekyll-gist
